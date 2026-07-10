@@ -1,0 +1,7 @@
+// Shared library module: DTOs, exceptions and enums used by every service.
+// It is a plain JAR (no Spring Boot application), so it does not apply the
+// Spring Boot plugin.
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
+    implementation 'jakarta.validation:jakarta.validation-api'
+}

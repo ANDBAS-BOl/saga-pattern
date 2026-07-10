@@ -1,0 +1,7 @@
+rootProject.name = 'saga-pattern-spring-boot-demo'
+
+include 'core'
+include 'orders-service'
+include 'products-service'
+include 'payments-service'
+include 'credit-card-processor-service'

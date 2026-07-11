@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.core.dto.commands;
+package com.appsdeveloperblog.core.dto.events;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class ReserveProductCommand {
+public class PaymentFailedEvent {
+    private UUID orderId;
     private UUID productId;
     private Integer productQuantity;
-    private UUID orderId;
 }

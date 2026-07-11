@@ -58,7 +58,6 @@ public class PaymentsCommandsHandler {
             );
 
             kafkaTemplate.send(paymentEventsTopicName, paymentFailedEvent);
-
             log.error(e.getLocalizedMessage(), e);
         }
     }

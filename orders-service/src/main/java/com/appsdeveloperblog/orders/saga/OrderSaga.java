@@ -70,7 +70,7 @@ public class OrderSaga {
     }
 
     @KafkaHandler
-    public void handleEvent(@Payload OderApprovedEvent event) {
+    public void handleEvent(@Payload OrderApprovedEvent event) {
         orderHistoryService.add(event.getOrderId(), OrderStatus.APPROVED);
     }
 

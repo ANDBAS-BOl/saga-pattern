@@ -11,6 +11,6 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OderApprovedEvent {
+public class OrderApprovedEvent {
     private UUID orderId;
 }

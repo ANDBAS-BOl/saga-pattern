@@ -1,7 +1,7 @@
 package com.appsdeveloperblog.orders.service;
 
 import com.appsdeveloperblog.core.dto.Order;
-import com.appsdeveloperblog.core.dto.events.OderApprovedEvent;
+import com.appsdeveloperblog.core.dto.events.OrderApprovedEvent;
 import com.appsdeveloperblog.core.dto.events.OrderCreatedEvent;
 import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders.dao.jpa.entity.OrderEntity;
@@ -59,7 +59,7 @@ public class OrderServiceImpl implements OrderService {
         orderEntity.setStatus(OrderStatus.APPROVED);
         orderRepository.save(orderEntity);
 
-        OderApprovedEvent approveOrderEvent = new OderApprovedEvent(
+        OrderApprovedEvent approveOrderEvent = new OrderApprovedEvent(
                 orderId);
 
         kafkaTemplate.send(ordersEventsTopicsName, approveOrderEvent);

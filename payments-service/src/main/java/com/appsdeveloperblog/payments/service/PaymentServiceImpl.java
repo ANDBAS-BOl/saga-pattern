@@ -13,7 +13,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class PaymentServiceImpl implements PaymentService {
-    public static final String SAMPLE_CREDIT_CARD_NUMBER = "374245455400126";
+    // Numero sintetico: no supera el algoritmo de Luhn y su prefijo no pertenece a
+    // ninguna red real, asi que no puede corresponder a una tarjeta existente.
+    public static final String SAMPLE_CREDIT_CARD_NUMBER = "9999888877776666";
     private final PaymentRepository paymentRepository;
     private final CreditCardProcessorRemoteService ccpRemoteService;
 
